@@ -1,0 +1,70 @@
+
+body {
+  background-color: rgb(251, 242, 230);
+}
+
+nav ul a,
+nav .brand-logo {
+  color: rgb(183, 17, 17);
+}
+
+nav {
+  background-color: rgb(251, 242, 230);
+}
+
+#logo {
+  width: 110px;
+  padding-top: 2px;
+}
+
+.imge {
+  width: 500px;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+  background-color: rgb(251, 242, 230);
+}
+
+
