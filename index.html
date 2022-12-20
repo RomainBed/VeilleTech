@@ -11,13 +11,14 @@
 <body>
   <nav role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img id="logo" src="logo.png" alt="Logo"></a>
+      <a id="logo-container" href="#" class="brand-logo"><img id="logo" src="img/logo.png" alt="Logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#" class="center-align">MENU</a></li>
+        <li><a href="index.html" class="center-align">Accueil</a></li>
+        <li><a href="exemples.html" class="center-align">Exemples</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Menu</a></li>
+        <li><a href="#">Accueil</a></li>
         <li><a class="dark-toggle" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"><i class="material-icons left">brightness_4</i> Toggle Dark Mode</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -34,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img class="imge" src="img1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img class="imge" src="img/img1.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
   <div class="container">
@@ -60,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img class="imge" src="img2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img class="imge" src="img/img2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -108,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img class="imge" src="img3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img class="imge" src="img/img3.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <div class="container">
@@ -139,8 +140,9 @@
   </div>
 
   <footer class="page-footer">
-    <div class="row center">
-      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light grey">Cliquez pour la vidéo démo</a>
+    <div class="center">
+      <p class="black">Cette vidéo montre une partie des design faisables avec ce framework </p>
+      <iframe width="900" height="450" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"></iframe>
     </div>
   </footer>
 
