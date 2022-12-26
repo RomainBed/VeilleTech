@@ -21,6 +21,8 @@ $('.dark-toggle').on('click',function(){
       $(this).find('i').text('brightness_4');
   }
 });
+});
 
-
+$(document).ready(function(){
+  $('.modal').modal();
 });
