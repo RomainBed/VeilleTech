@@ -26,3 +26,19 @@ $('.dark-toggle').on('click',function(){
 $(document).ready(function(){
   $('.modal').modal();
 });
+
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
+
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
+
+$(document).ready(function(){
+  $('.tap-target').tapTarget();
+});
+
+$(document).ready(function(){
+  $('.datepicker').datepicker();
+});
