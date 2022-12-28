@@ -1,176 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>VT Materialize</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img id="logo" src="img/logo.png" alt="Logo"></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html" class="center-align">Accueil</a></li>
-        <li><a href="exemples.html" class="center-align">Composants</a></li>
-        <li><a href="ExemplesJS.html" class="center-align">Exemples avec JS</a></li>
-        <li><a class="dark-toggle" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"><i class="material-icons left">brightness_4</i></a></li>
-    </ul>
+<html lang="fr">
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.html" class="center-align">Accueil</a></li>
-        <li><a href="exemples.html" class="center-align">Composants</a></li>
-        <li><a href="ExemplesJS.html" class="center-align">Exemples avec JS</a></li>
-        <li><a class="dark-toggle" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"><i class="material-icons left">brightness_4</i>Mode Sombre / Clair</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>VT Materialize Romain</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+  </head>
 
+  <body>
+    <nav role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo"><img id="logo" src="img/logo.png" alt="Logo"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html" class="center-align">Accueil</a></li>
+          <li><a href="exemples.html" class="center-align">Composants</a></li>
+          <li><a href="ExemplesJS.html" class="center-align">Exemples avec JS</a></li>
+        </ul>
 
-  <div class="carousel carousel-slider">
-    <div class="carousel-item red white-text">
-      <h2 class="center">Photos Bordeaux (défiler avec la souris)</h2>
-      <div class="carousel">
-        <a class="carousel-item"><img id="b1" src="img/b1.png"></a>
-        <a class="carousel-item"><img id="b2" src="img/b2.PNG"></a>
-        <a class="carousel-item"><img id="b3" src="img/b3.jpg"></a>
-        <a class="carousel-item"><img id="b4" src="img/b4.jpg"></a>
-        <a class="carousel-item"><img id="b5" src="img/b5.jpg"></a>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="index.html" class="center-align">Accueil</a></li>
+          <li><a href="exemples.html" class="center-align">Composants</a></li>
+          <li><a href="ExemplesJS.html" class="center-align">Exemples avec JS</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
-    </div>
-  </div>
-  
-  <br></br>
-  <h5 class="center">Les collapses :</h5>
+    </nav>
 
-  <ul class="collapsible popout">
-    <li>
-      <div class="collapsible-header grey"><i class="material-icons">filter_drama</i>Cliquer pour découvrir</div>
-      <div class="collapsible-body white"><span>C'est bon, vous avez découvert ce qu'il se caché ici.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header blue"><i class="material-icons">album</i>Deuxième</div>
-      <div class="collapsible-body white"><span>Seconde cachette.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header grey"><i class="material-icons">face</i>Troisième</div>
-      <div class="collapsible-body white"><span>Dernière cachette.</span></div>
-    </li>
-  </ul>
-  <div class="row">
-    <div class="col s6 center">
-      <br></br>
-      <h5 class="center">Le bouton magique :</h5>
-      <br></br> 
-      <div class="center">
-        <a class="waves-effect waves-light btn red" onclick="$('.tap-target').tapTarget('open')">Ouvrir le bouton</a>
-      </div>
-      <a id="menu" class="waves-effect waves-light btn btn-floating left" ><i class="material-icons red">menu</i></a>
-
-      <div class="tap-target blue" data-target="menu">
-        <div class="tap-target-content">
-          <h5>Apparition</h5>
-          <p>Ce bouton est génial !</p>
+    <div class="carousel carousel-slider">
+      <div class="carousel-item grey white-text">
+        <h2 class="center">Photos Bordeaux (défiler avec la souris)</h2>
+        <div class="carousel">
+          <a class="carousel-item"><img id="b1" src="img/b1.png"></a>
+          <a class="carousel-item"><img id="b2" src="img/b2.PNG"></a>
+          <a class="carousel-item"><img id="b3" src="img/b3.jpg"></a>
+          <a class="carousel-item"><img id="b4" src="img/b4.jpg"></a>
+          <a class="carousel-item"><img id="b5" src="img/b5.jpg"></a>
         </div>
       </div>
-    </div> 
-    
-    <div class="col s6 center">
-      <br></br>
-      <h5 class="center">Navbar à gauche :</h5>
-
-      <br></br>
-      <div class="center"><a href="#" data-target="slide-out" class="sidenav-trigger">Clique ici pour faire apparaître le menu</a></div>
-      <ul id="slide-out" class="sidenav">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="img/b1.png">
-          </div>
-          <a href="#"><img class="circle" src="img/b2.png"></a>
-          <a href="#"><span class="white-text name">Romain Bedouret</span></a>
-          <a href="#"><span class="white-text email">romainbedouret@gmail.com</span></a>
-        </div></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>Premier lien</a></li>
-        <li><a href="#!"><i class="material-icons">face</i>Deuxième lien</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Séparation et titre de lien</a></li>
-        <li><a class="waves-effect" href="#!">Dernier lien</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col s6 center">
-      <br></br>
-      <h5 class="center">Bouton surprise :</h5>
-      <br></br>
-      <div class="center">
-        <a onclick="M.toast({html: 'Bonne année !!'})" class="btn">Clique !</a>
-      </div>
     </div>
     
-    <div class="col s6 center">
-      <div class="center">
+    <br></br>
+    <h5 class="center">Les collapses :</h5>
+
+    <ul class="collapsible popout">
+      <li>
+        <div class="collapsible-header grey"><i class="material-icons">filter_drama</i>Cliquer pour découvrir</div>
+        <div class="collapsible-body white"><span>C'est bon, vous avez découvert ce qu'il se caché ici.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header blue"><i class="material-icons">album</i>Deuxième</div>
+        <div class="collapsible-body white"><span>Seconde cachette.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header grey"><i class="material-icons">face</i>Troisième</div>
+        <div class="collapsible-body white"><span>Dernière cachette.</span></div>
+      </li>
+    </ul>
+
+    <div class="row">
+      <div class="col s6 center">
         <br></br>
-        <h5 class="center">Checkbox : </h5>
-        <br></br> 
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>Vous pouvez</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked="checked" />
-              <span>tester</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span>les checkboxs</span>
-            </label>
-          </p>
+        <h5 class="center">Le bouton magique :</h5>
+        <br></br>
+
+        <div class="center">
+          <a class="waves-effect waves-light btn red" onclick="$('.tap-target').tapTarget('open')">Ouvrir le bouton</a>
+        </div>
+        <a id="menu" class="waves-effect waves-light btn btn-floating left" ><i class="material-icons red">menu</i></a>
+
+        <div class="tap-target blue" data-target="menu">
+          <div class="tap-target-content">
+            <h5>Apparition</h5>
+            <p>Ce bouton est génial !</p>
+          </div>
+        </div>
+      </div> 
+      
+      <div class="col s6 center">
+        <br></br>
+        <h5 class="center">Navbar à gauche :</h5>
+        <br></br>
+
+        <div class="center"><a href="#" data-target="slide-out" class="sidenav-trigger">Clique ici pour faire apparaître le menu</a></div>
+        <ul id="slide-out" class="sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="img/b1.png">
+            </div>
+            <a href="#"><img class="circle" src="img/b2.png"></a>
+            <a href="#"><span class="white-text name">Romain Bedouret</span></a>
+            <a href="#"><span class="white-text email">romainbedouret@gmail.com</span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>Premier lien</a></li>
+          <li><a href="#!"><i class="material-icons">face</i>Deuxième lien</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Séparation et titre de lien</a></li>
+          <li><a class="waves-effect" href="#!">Dernier lien</a></li>
+        </ul>
       </div>
     </div>
-  </div>
 
+    <div class="row">
+      <div class="col s6 center">
+        <br></br>
+        <h5 class="center">Bouton surprise :</h5>
+        <br></br>
+        <div class="center">
+          <a onclick="M.toast({html: 'Bonne année !'})" class="btn red">Clique !</a>
+        </div>
+      </div>
+      
+      <div class="col s6">
+        <div class="center">
+          <br></br>
+          <h5 class="center">Checkbox : </h5>
+          <br></br> 
+          <form action="#">
+            <p>
+              <label>
+                <input type="checkbox">
+                <span>Vous pouvez</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" checked="checked">
+                <span>tester</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" checked="checked">
+                <span>les checkboxs</span>
+              </label>
+            </p>
+        </div>
+      </div>
+    </div>
 
-  <div class="center">
-      <br></br>
+    <div class="row">
+      <div class="col s6">
+        <br></br>
         <h5 class="center">Formulaire avec choix de date : </h5>
-        <br></br> 
-      <div class="input-field">
-        <input id="date" type="text" class="datepicker"><label for="date">Clique pour choisir une date !</label>
+        <br></br>
+
+        <div class="input-field">
+          <input id="date" type="text" class="datepicker"><label for="date">Clique pour choisir une date !</label>
+        </div>
       </div>
-  </div>
 
-  <footer class="page-footer">
-    <div class="progress">
-      <div class="indeterminate"></div>
+      <div class="col s6">
+        <br></br>
+        <h5 class="center">Effet sur le bouton : </h5>
+        <br></br>
+
+        <div class="center">
+          <a href="#!" class="btn waves-effect waves-yellow black">Clique</a>
+          <a href="#!" class="btn waves-effect waves-red black">sur ces</a>
+          <a href="#!" class="btn waves-effect waves-green black">boutons</a>
+        </div>
+      </div>
     </div>
-    <div>
+
+    <footer class="page-footer">
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+      <div>
         <ul class="pagination center">
-            <li class="waves-effect"><a href="exemples.html"><i class="material-icons">chevron_left</i></a></li>
-            <li class="waves-effect"><a href="index.html">1</a></li>
-            <li class="waves-effect"><a href="exemples.html">2</a></li>
-            <li class="active"><a href="ExemplesJS.html">3</a></li>
-            <li class="disabled"><a href="exemples.html"><i class="material-icons">chevron_right</i></a></li>
-          </ul>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+          <li class="waves-effect"><a href="exemples.html"><i class="material-icons">chevron_left</i></a></li>
+          <li class="waves-effect"><a href="index.html">1</a></li>
+          <li class="waves-effect"><a href="exemples.html">2</a></li>
+          <li class="active"><a href="ExemplesJS.html">3</a></li>
+          <li class="disabled"><a href="exemples.html"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+    </footer>
 
   </body>
 </html>
